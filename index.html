@@ -8,10 +8,28 @@
     <header>
       <img src="images/fakeLogo.png" alt="fake logo" />
       <div class="cart">
-        <img src="images/cart.png" alt="cart" />
-        <span>0</span>
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span id="items-count">0</span>
       </div>
     </header>
+
+    <main>
+      <h1>Welcome to the MigraStore!</h1>
+
+      <div class="filter-container"></div>
+
+      <div class="products-container">
+        <div class="product">
+          <img id="product-img" src="images/fakeLogo.png" alt="fake item" />
+          <h2 id="product-title">Fake Item 1</h2>
+          <p>€<span id="product-price">100</span></p>
+          <div class="rating-container">
+              <p><span id="product-rating-count">2</span> reviews</p>
+            </div>
+            <button>Add to cart</button>
+        </div>
+        
+    </main>
 
     <script src="main.js"></script>
     <script src="https://kit.fontawesome.com/391e5e17cf.js" crossorigin="anonymous"></script>
