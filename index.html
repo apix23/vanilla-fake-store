@@ -8,10 +8,72 @@
     <header>
       <img src="images/fakeLogo.png" alt="fake logo" />
       <div class="cart">
-        <img src="images/cart.png" alt="cart" />
-        <span>0</span>
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span id="items-count">0</span>
       </div>
     </header>
+
+    <main>
+      <h1>Welcome to the MigraStore!</h1>
+
+      <div class="filter-sort-container">
+        <div class="filter-container">
+          <h3>Filter by:</h3>
+
+          <form class="filters-wrapper">
+            <div class="filter-less-than">
+              <label for="less-than">Less than:</label>
+              <input type="number" name="less-than" id="less-than" />
+            </div>
+
+            <div class="filter-greater-than">
+              <label for="greater-than">Greater than:</label>
+              <input type="number" name="greater-than" id="greater-than" />
+            </div>
+
+            <div class="filter-category">
+              <label for="category">Category</label>
+              <select id="category">
+                <option default value="">Choose category</option>
+                <option value="all">All</option>
+                <option value="electronics">Electronics</option>
+                <option value="jewelery">Jewelery</option>
+              </select>
+            </div>
+
+            <button>Filter</button>
+          </form>
+        </div>
+
+        <div class="sort-container">
+          <h3>Sort by:</h3>
+          <div class="sort-wrapper">
+            <div class="sort-max-price">
+              input
+              <label for="max-price">Max price</label>
+              <input type="radio" name="price" id="max-price" />
+            </div>
+
+            <div class="sort-min-price">
+              <label for="min-price">Lower price</label>
+              <input type="radio" name="price" id="max-price" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="products-container">
+        <div class="product">
+          <img id="product-img" src="images/fakeLogo.png" alt="fake item" />
+          <h2 id="product-title">Fake Item 1</h2>
+          <p>€<span id="product-price">100</span></p>
+          <div class="rating-container">
+            <p><span id="product-rating-count">2</span> reviews</p>
+          </div>
+          <button>Add to cart</button>
+        </div>
+      </div>
+    </main>
 
     <script src="main.js"></script>
     <script src="https://kit.fontawesome.com/391e5e17cf.js" crossorigin="anonymous"></script>
