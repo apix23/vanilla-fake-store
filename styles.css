@@ -115,7 +115,7 @@ main h1 {
   color: var(--main-color);
 }
 
-.product > p {
+.product .product-price {
   margin-top: 10px;
   font-weight: bold;
 }
