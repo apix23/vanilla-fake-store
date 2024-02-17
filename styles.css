@@ -60,6 +60,34 @@ main h1 {
   color: var(--main-color);
 }
 
+/* Filter styles */
+
+.filter-sort-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.filters-wrapper,
+.sort-wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.filters-wrapper input {
+  width: 50px;
+}
+
+.filters-wrapper button {
+  padding: 5px;
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 /* Product styles */
 
 .products-container {
