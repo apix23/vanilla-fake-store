@@ -1,6 +1,6 @@
 const {describe, expect, test} =  require('@jest/globals')
 
- const {getAllCategories} = require('./main.js');
+ const {getProductsLessThan, getAllCategories, getProductsFilterByCategory, sortByMaxPrice} = require('./main.js');
 const fakeData = [
 
     {
@@ -47,5 +47,21 @@ describe('testing main behavior', () => {
     const allCategories = getAllCategories(fakeData)
     expect(allCategories).toEqual(["men's clothing","jewelery"]);
     expect(allCategories.length).toEqual(2);
+  });
+    test('should filter a products array by a category ', () => {
+    expect.assertions(1)
+    const category = "jewelery"
+    const filteredProducts = getProductsFilterByCategory("men's clothing",fakeData)
+    expect(filteredProducts.length).toEqual(2);
+  });
+    test('should sort the products by max price ', () => {
+    expect.assertions(1) 
+    const sortedProducts = sortByMaxPrice(fakeData)
+    expect(sortedProducts[0].price).toEqual(168);
+  });
+    test('should filter products by price lower than value received ', () => {
+    expect.assertions(1) 
+    const filterProduct = getProductsLessThan(100,fakeData)
+    expect(filterProduct.length).toEqual(1);
   });
 });
